@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="app.js"></script>
-    <style rel="stylesheet" href="styles.css" ></style>
-    <title>Document</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css" ></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Etch-a Sketch</title>
 </head>
 <body>
+    <h1>Welcome to sketching</h1>
+    <div class="layout">
+
+        <div class="container">
+            <div class="canvas">
+
+            </div>
+
+        </div>  
+        <div class="options">    
+            <div class="buttons">
+                <button onclick="changeColor('black')" class="button">black</button>
+                <button onclick="changeColor('rainbow')" class="button">rainbow</button>
+                <button onclick="changeColor('white')" class="button">erase</button>
+                <button onclick="reset()" class="button reset" >reset</button>
+            </div>  
+            <div class="adjustCanvas">
+                <input type="text" id="sizeAdjust" onchange='changeSize(this.value)' placeholder="Enter size" value="15"/>
+                <button class="button changeSize"> Set Size</button>
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
